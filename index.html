@@ -210,7 +210,8 @@
         var ll = {lat: 12.689845, lng: 101.537361};
         var map = new google.maps.Map(mapDiv, {
           center: ll,
-          zoom: 13
+          zoom: 13,
+          scrollwheel: false
         });
         var marker = new google.maps.Marker({
 		    position: ll,
