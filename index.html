@@ -26,7 +26,7 @@
 			var name = hash.split("#");
 			if(name.length == 2){
 				$("#invite-name").show();
-				$("#invite-name span").html(name[1]);
+				$("#invite-name span").html(decodeURIComponent(name[1]));
 			}else{
 				$("#invite-name").hide();
 			}
@@ -104,8 +104,17 @@
 		h1{
 			padding: 15px;
 			color: #2C1608;
-			text-decoration: underline;
 			margin: 0;
+		}
+
+		.line{
+			padding: 0 15px;
+		}
+
+		hr{
+			width: 100%;
+			height: 1px;
+			background: #2C1608;
 		}
 
 		#card-panel{
@@ -171,14 +180,21 @@
 			#card {
 				height: 200px;
 			}
+			#map-panel .ll{
+				width: 100%;
+				display: block;
+			}
 		}
 
 	</style>
 </head>
 <body>
 	<h1 id="main-story">
-		Yokong Wedding
+		YoKong Wedding
 	</h1>
+	<div class="line">
+		<hr>
+	</div>
 	<div id="invite">
 		<div class="text-title">
 			เรียนเชิญ
@@ -197,6 +213,9 @@
 		  </div> 
 	  </div> 
 	</div>
+	<div class="line">
+		<hr>
+	</div>
 	<div id="map-panel">
 		<span>
 			แผนที่บ้านงาน <span class="ll">(12.689845, 101.537361)</span>
@@ -211,12 +230,12 @@
         var map = new google.maps.Map(mapDiv, {
           center: ll,
           zoom: 13,
-          scrollwheel: false
+          scrollwheel: false,
+          draggable: false
         });
         var marker = new google.maps.Marker({
 		    position: ll,
-		    map: map,
-		    title: 'Hello World!'
+		    map: map
 		  });
       }
     </script>
