@@ -228,22 +228,20 @@
 				if(w_width > 660){
 					w_width = 660;
 				}
-				$("#card-panel").css({"max-width": w_width + "px"})
-				$("#card").css({"height": $("#card img").eq(0).height() + "px"})
+				$("#card-panel").css({"max-width": w_width + "px"});
+				$("#card").css({"height": $("#card img").eq(0).height() + "px"});
 			})
-			// $("img").load(function() {
-				// console.log(11);
-			  // Handler for .load() called.
+			setTimeout(function(){
+
 				var w_width = $(window).width();
 				var w_height = $(window).height();
 				if(w_width > 660){
 					w_width = 660;
 				}
-				$("#card-panel").css({"max-width": w_width + "px"})
-				$("#card").css({"height": $("#card img").eq(0).height() + "px"})
-
+				$("#card-panel").css({"max-width": w_width + "px"});
+				$("#card").css({"height": $("#card img").eq(0).height() + "px"});
 				$("#card").flip({axis: 'x'});
-			// });
+			},1000);
 
 		});
 	</script>
