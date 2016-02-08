@@ -31,6 +31,23 @@
 				$("#invite-name").hide();
 			}
 
+			$(window).resize(function(){
+				var w_width = $(this).width();
+				var w_height = $(window).height();
+				if(w_width > 660){
+					w_width = 660;
+				}
+				$("#card-panel").css({"max-width": w_width + "px"})
+				$("#card").css({"height": $("#card img").eq(0).height() + "px"})
+			})
+			var w_width = $(window).width();
+			var w_height = $(window).height();
+			if(w_width > 660){
+				w_width = 660;
+			}
+			$("#card-panel").css({"max-width": w_width + "px"})
+			$("#card").css({"height": $("#card img").eq(0).height() + "px"})
+
 			$("#card").flip({axis: 'x'});
 
 		});
@@ -173,12 +190,13 @@
 
 		img {
 			max-width: 100%;
-			max-height: 100%;
+			/*max-height: 100%;*/height: auto;
+			display: block;
 			cursor: pointer;
 		}
 		@media (max-width:640px){
 			#card {
-				height: 200px;
+				height: 440px;
 			}
 			#map-panel .ll{
 				width: 100%;
