@@ -112,6 +112,7 @@
 		}
 
 		#invite{
+			display: none;
 			max-width: 600px;
 			height: auto;
 			position: relative;
@@ -147,7 +148,6 @@
 			text-indent: 40px;
 			margin-top: 10px;
 			font-size: 20px;
-			display: none;
 			/*font-weight: normal;*/
 		}
 
@@ -212,10 +212,10 @@
 			var hash = window.location.hash;
 			var name = hash.split("#");
 			if(name.length == 2){
-				$("#invite-name").show();
+				$("#invite").show();
 				$("#invite-name span").html(decodeURIComponent(name[1]));
 			}else{
-				$("#invite-name").hide();
+				$("#invite").hide();
 			}
 
 			$(window).resize(function(){
