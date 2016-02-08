@@ -36,6 +36,60 @@
 		});
 	</script>
 	<style type="text/css">
+
+
+		@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
+		@font-face {
+		  font-family: "Boon-v1.0";
+		  src: url(fonts/woff2/Boon-300.woff2) format("woff2"), url(fonts/woff/Boon-300.woff) format("woff"), url(fonts/ttf/Boon-300.ttf) format("truetype");
+		  font-weight: 300;
+		  font-style: normal; }
+		@font-face {
+		  font-family: "Boon-v1.0";
+		  src: url(fonts/woff2/Boon-300i.woff2) format("woff2"), url(fonts/woff/Boon-300i.woff) format("woff"), url(fonts/ttf/Boon-300i.ttf) format("truetype");
+		  font-weight: 300;
+		  font-style: oblique; }
+		@font-face {
+		  font-family: "Boon-v1.0";
+		  src: url(fonts/woff2/Boon-400.woff2) format("woff2"), url(fonts/woff/Boon-400.woff) format("woff"), url(fonts/ttf/Boon-400.ttf) format("truetype");
+		  font-weight: 400;
+		  font-style: normal; }
+		@font-face {
+		  font-family: "Boon-v1.0";
+		  src: url(fonts/woff2/Boon-400i.woff2) format("woff2"), url(fonts/woff/Boon-400i.woff) format("woff"), url(fonts/ttf/Boon-400i.ttf) format("truetype");
+		  font-weight: 400;
+		  font-style: oblique; }
+		@font-face {
+		  font-family: "Boon-v1.0";
+		  src: url(fonts/woff2/Boon-500.woff2) format("woff2"), url(fonts/woff/Boon-500.woff) format("woff"), url(fonts/ttf/Boon-500.ttf) format("truetype");
+		  font-weight: 500;
+		  font-style: normal; }
+		@font-face {
+		  font-family: "Boon-v1.0";
+		  src: url(fonts/woff2/Boon-500i.woff2) format("woff2"), url(fonts/woff/Boon-500i.woff) format("woff"), url(fonts/ttf/Boon-500i.ttf) format("truetype");
+		  font-weight: 500;
+		  font-style: oblique; }
+		@font-face {
+		  font-family: "Boon-v1.0";
+		  src: url(fonts/woff2/Boon-600.woff2) format("woff2"), url(fonts/woff/Boon-600.woff) format("woff"), url(fonts/ttf/Boon-600.ttf) format("truetype");
+		  font-weight: 600;
+		  font-style: normal; }
+		@font-face {
+		  font-family: "Boon-v1.0";
+		  src: url(fonts/woff2/Boon-600i.woff2) format("woff2"), url(fonts/woff/Boon-600i.woff) format("woff"), url(fonts/ttf/Boon-600i.ttf) format("truetype");
+		  font-weight: 600;
+		  font-style: oblique; }
+		@font-face {
+		  font-family: "Boon-v1.0";
+		  src: url(fonts/woff2/Boon-700.woff2) format("woff2"), url(fonts/woff/Boon-700.woff) format("woff"), url(fonts/ttf/Boon-700.ttf) format("truetype");
+		  font-weight: 700;
+		  font-style: normal; }
+		@font-face {
+		  font-family: "Boon-v1.0";
+		  src: url(fonts/woff2/Boon-700i.woff2) format("woff2"), url(fonts/woff/Boon-700i.woff) format("woff"), url(fonts/ttf/Boon-700i.ttf) format("truetype");
+		  font-weight: 700;
+		  font-style: oblique; }
+
 		html, body, div, ul {
 			box-sizing: border-box;
 		}
@@ -44,14 +98,20 @@
 			margin: 0;
 			padding: 0;
 			background: #fffff0;
+			font-family: "Boon-v1.0";
+		}
+
+		h1{
+			padding: 15px;
+			color: #2C1608;
+			text-decoration: underline;
+			margin: 0;
 		}
 
 		#card-panel{
 			max-width: 600px;
 			height: auto;
 			position: relative;
-			left: 0;
-			right: 0;
 			margin: 0 auto;
 			padding: 0 15px;
 		}
@@ -60,28 +120,31 @@
 			max-width: 600px;
 			height: auto;
 			position: relative;
-			left: 0;
-			right: 0;
-			top: 20px;
-			margin: 15px auto;
-			font-size: 20px;
+			margin: auto auto 15px auto;
+			font-size: 18px;
 			color: #2C1608;
 			padding: 0 15px;
+			font-weight: bold;
 		}
 
 		#map-panel{
 			max-width: 600px;
-			height: auto;
+			height: 400px;
 			position: relative;
-			left: 0;
-			right: 0;
 			margin: 0 auto;
 			padding: 0 15px;
+			font-size: 18px;
+			color: #2C1608;
+			font-weight: bold;
+		}
+		#map-panel .ll{
+			font-weight: normal;
 		}
 
 		#map{
 			max-width: 100%;
 			height: 400px;
+			margin-top: 15px;
 		}
 
 		#invite-name{
@@ -89,12 +152,14 @@
 			margin-top: 10px;
 			font-size: 20px;
 			display: none;
+			font-weight: normal;
 		}
 
 		#card {
 			width: 100%;
-			height: 100%;
-			margin: 40px auto;
+			height: 400px;
+			margin: 20px auto;
+			font-weight: bold;
 		}
 
 		img {
@@ -106,6 +171,9 @@
 	</style>
 </head>
 <body>
+	<h1 id="main-story">
+		Yokong Wedding
+	</h1>
 	<div id="invite">
 		<div class="text-title">
 			เรียนเชิญ
@@ -117,16 +185,16 @@
 	<div id="card-panel"> 
 		<div id="card"> 
 		  <div class="first"> 
-		    <img src="yokong-wedding-card01.jpg">
+		    <img src="images/yokong-wedding-card01.jpg">
 		  </div> 
 		  <div class="last">
-		    <img src="yokong-wedding-card02.jpg">
+		    <img src="images/yokong-wedding-card02.jpg">
 		  </div> 
 	  </div> 
 	</div>
 	<div id="map-panel">
 		<span>
-			แผนที่บ้านงาน (12.689845, 101.537361)
+			แผนที่บ้านงาน <span class="ll">(12.689845, 101.537361)</span>
 		</span>
 		<div id="map">
 		</div>
